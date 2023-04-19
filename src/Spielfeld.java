@@ -45,15 +45,8 @@ public class Spielfeld {
     final String ANSI_BLUE = "\u001B[34m";
     final String ANSI_PURPLE = "\u001B[35m";
     final String ANSI_CYAN = "\u001B[36m";
-
     String fW = "\033[47m \033[0m";
     String fG = "\033[42m \033[0m";
-
-    // Perform player actions within while loop
-    // For example:
-    // - Move player to another room
-    // - Attack monster
-    // - Pick up item
 
     System.out.print("\033[H\033[2J");
     System.out.flush();
