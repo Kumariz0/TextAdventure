@@ -1,16 +1,17 @@
 package src;
+
 public class Item {
 
     // Attribute
     private String name;
     private int nutzen;
-    private boolean istVersteckt;
+    private double energieIncrease;
 
     // Konstruktor
-    public Item(String name, int nutzen, boolean istVersteckt) {
+    public Item(String name, int nutzen, double energieIncrease) {
         this.name = name;
         this.nutzen = nutzen;
-        this.istVersteckt = istVersteckt;
+        this.energieIncrease = energieIncrease;
     }
 
     // get Methoden
@@ -22,10 +23,6 @@ public class Item {
         return this.nutzen;
     }
 
-    public boolean istVersteckt() {
-        return this.istVersteckt;
-    }
-
     // set Methoden
     public void setName(String name) {
         this.name = name;
@@ -35,8 +32,11 @@ public class Item {
         this.nutzen = nutzen;
     }
 
-    public void setIstVersteckt(boolean istVersteckt) {
-        this.istVersteckt = istVersteckt;
+    public void setenergieIncrease(double energieIncrease) {
+        this.energieIncrease = energieIncrease;
     }
 
+    public double getenergieIncrease() {
+        return this.energieIncrease;
+    }
 }

@@ -1,4 +1,5 @@
 package src;
+
 public class Monster {
 
     private String name;
@@ -49,9 +50,11 @@ public class Monster {
     public void setZKraft(int zKraft) {
         this.zKraft = zKraft;
     }
+
     public void setDefence(int defence) {
         this.defence = defence;
     }
+
     public int getDefence() {
         return defence;
     }

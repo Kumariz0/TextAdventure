@@ -1,12 +1,13 @@
 package src;
-public class Spieler {
 
-  private String name;
+public class Spieler {
   private int energie;
+  private int maxEnergie;
   private int zKraft;
   private int xPos;
   private int yPos;
   private Item hand;
+  private int _counter;
 
   public Spieler(int x, int y, int energie, int zKraft) {
     this.energie = energie;
@@ -49,10 +50,16 @@ public class Spieler {
   public void setZKraft(int zK) {
     this.zKraft = zK;
   }
+
   public void pickup(Item item) {
     this.hand = item;
   }
-  public Item gethand() {
-    return this.hand;
+
+  public String gethand() {
+    if (this.hand != null) {
+      return this.hand.getName();
+    } else {
+      return "Nichts";
+    }
   }
 }
