@@ -1,13 +1,14 @@
-package src;
+package src.javaeditor;
 
 public class Spieler {
   private int energie;
   private int maxEnergie;
-  private int zKraft;
+  private double zKraft;
   private int xPos;
   private int yPos;
   private Item hand;
   private int _counter;
+  private int lastSleept;
 
   public Spieler(int x, int y, int energie, int zKraft) {
     this.energie = energie;
@@ -15,6 +16,7 @@ public class Spieler {
     this.xPos = x;
     this.yPos = y;
     this.hand = null;
+    this.maxEnergie = 100;
   }
 
   // get-Methoden
@@ -30,7 +32,7 @@ public class Spieler {
     return this.energie;
   }
 
-  public int getZKraft() {
+  public double getZKraft() {
     return this.zKraft;
   }
 
@@ -44,11 +46,15 @@ public class Spieler {
   }
 
   public void setEnergie(int e) {
-    this.energie = e;
+    if (e > this.maxEnergie) {
+      this.energie = this.maxEnergie;
+    } else {
+      this.energie = e;
+    }
   }
 
-  public void setZKraft(int zK) {
-    this.zKraft = zK;
+  public void setZKraft(double d) {
+    this.zKraft = d;
   }
 
   public void pickup(Item item) {
@@ -61,5 +67,12 @@ public class Spieler {
     } else {
       return "Nichts";
     }
+  }
+
+  public int getLastSleept() {
+    return this.lastSleept;
+  }
+  public void setLastSleept(int lastSleept) {
+    this.lastSleept = lastSleept;
   }
 }

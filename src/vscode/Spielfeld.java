@@ -1,4 +1,4 @@
-package src;
+package src.vscode;
 
 import java.util.Scanner;
 
