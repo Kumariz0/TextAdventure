@@ -390,7 +390,9 @@ public class Spielfeld {
             }
           } else {
             monster.setEnergie(monster.getEnergie() - damage);
-            System.out.println("Du hast dem Monster " + damage + " Schaden zugefuegt!");
+            spieler.setEnergie(spieler.getEnergie() - monster.getZKraft());
+            System.out.println("Du hast dem Monster " + damage + " Schaden zugefuegt und das Monster hat dir " + monster.getZKraft() + " hinzugefügt");
+
             try {
               Thread.sleep(1000);
             } catch (InterruptedException e) {
